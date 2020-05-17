@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-image: url(../img/bg-img3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body {
+    font-family: 'Pangolin';
+    min-height: 100vh;
+    color: rgb(5, 32, 75);
+}
+
+header {
+    font-size: 1.7rem;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .todo-container {
+  padding-top: 102px;
+}
+
+.inputDiv {
+    display: grid;
+    grid-column: auto;
+}
+
+.todo-input, .todo-input-details {
+    font-size: 1.3rem;
+    margin-right: 30px;
+    padding: 5px;
+    border-radius: 0.5rem;
+    background: rgb(207, 207, 200);
+}
+
+.todo-input-details{
+    margin-top: 10px;
+    min-height: fit-content;
+}
+
+.add-btn{
+    font-size: 2rem;
+    color: darkgreen;
+    padding:0px 5px;
+    border-radius: 10px;
+    box-shadow: 3px -3px 3px rgb(65, 37, 4) ;
+    background: rgb(186, 219, 189);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    color:  rgb(186, 219, 189);
+    background: darkgreen;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+}
+
+.todo-list{
+    margin-top: 20px;
+    min-width: 30%;  
+    list-style-type: none;
+}
+
+.todoDiv{
+    background: white;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todoDiv li{
+    flex: 1;
+}
+
+.trash-btn, 
+.check-btn {
+    background-color: rgb(102, 109, 102);
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    color: rgb(233, 235, 230);
+    
+}
+
+.checked {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.check-btn {
+    background-color: rgb(102, 153, 26);
+}
+
+.todo-title, 
+.todo-detail{
+    padding: 0rem 0.5rem;
+}
+
+.fas {
+    pointer-events: none;
+}

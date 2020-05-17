@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+            integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Todo List</title>
+    </head>
+    <body>
+        <header>
+            <h1>Sammy's Todo List</h1>
+        </header>
+        <form >
+            <div class="inputDiv">
+                <input type="text" class="todo-input" placeholder="Task title" required/>
+            <input
+                type="text"
+                class="todo-input-details"
+                placeholder="Details (optional)"
+            />
+            </div>
+            <button type="submit" class="add-btn">
+                <i class="fas fa-plus-square"></i>
+            </button>
+        </form>
+        <div class="todo-container">
+            <ul class="todo-list">
+                <!-- injected with eventlisteners -->
+            </ul>
+        </div>
+
+        <script src="./index.js"></script>
+    </body>
+</html>
