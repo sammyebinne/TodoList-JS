@@ -1,3 +1,3 @@
 # TodoList-JS
-A simple Todo list using plain Javascript and animations. 
+A simple Todo list with animations, using plain Javascript. 
 
