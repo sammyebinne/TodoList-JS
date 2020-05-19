@@ -55,15 +55,28 @@ function addTask(event) {
 
     // add created div to todo list 
     todoList.appendChild(todoDiv);
-    // title.value = '';
-    // taskDetail.value = '';
+    title.value = '';
+    taskDetail.value = '';
 }
 
 function deleteCheck(event){
     const item = event.target;
-    const todo = item.parentElement;
+    
 
-    item.classList[0] === 'trash-btn' ? todo.remove() : item.classList[0] === 'check-btn' ? todo.classList.toggle('checked') : null; 
+    if (item.classList[0] === 'trash-btn'){
+        const todo = item.parentElement;
+        todo.remove();
+        // todo.classList.add('drop');
+        // todo.addEventListener('transitionend', function () { 
+        //     todo.remove()
+        // });
+    } 
+    
+    
+    if (item.classList[0] === 'check-btn'){
+        const todo = item.parentElement;
+        todo.classList.toggle('checked')
+    }  
     
 }
 

@@ -18,20 +18,27 @@
     </head>
     <body>
         <header>
-            <h1>Sammy's Todo List</h1>
+            <h1>Janet's Todo List</h1>
         </header>
         <form >
             <div class="inputDiv">
-                <input type="text" class="todo-input" placeholder="Task title" required/>
+                <input type="text" class="todo-input" placeholder="Enter new task" required/>
             <input
                 type="text"
                 class="todo-input-details"
-                placeholder="Details (optional)"
+                placeholder="Task details (optional)"
             />
             </div>
             <button type="submit" class="add-btn">
                 <i class="fas fa-plus-square"></i>
             </button>
+            <div class="select">
+                <select name="todos" id="" class="filter-todo">
+                    <option value="All">All</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Uncompleted">Uncompleted</option>
+                </select>
+            </div> 
         </form>
         <div class="todo-container">
             <ul class="todo-list">

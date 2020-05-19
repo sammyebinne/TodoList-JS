@@ -30,14 +30,9 @@ form {
     /* padding: 10px; */
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
-.sticky + .todo-container {
-  padding-top: 102px;
+form {
+    flex-direction: column;
+    position: relative;
 }
 
 .inputDiv {
@@ -67,6 +62,9 @@ form {
     background: rgb(186, 219, 189);
     cursor: pointer;
     transition: all 0.3s ease;
+    position: absolute;
+    top: 15%;
+    margin-left: 130px; 
 }
 
 .add-btn:hover {
@@ -93,6 +91,13 @@ form {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.3s ease-in;
+    max-width: 60vh;
+    width: 60vh;
+}
+
+.todoDiv:hover{
+   transform: translate(1px, -1px);
 }
 
 .todoDiv li{
@@ -124,6 +129,62 @@ form {
     padding: 0rem 0.5rem;
 }
 
+.todo-title{
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
 .fas {
     pointer-events: none;
 }
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    position: relative;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+select {
+    color: inherit;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: darkgreen;
+    color: rgb(186, 219, 189);
+    top: 0;
+    right: 0;
+    padding: .5rem;
+    pointer-events: none;
+    transition:all 0.5s ease;
+}
+
+.select:hover::after{
+    background: white;
+    color: darkgreen;
+}
+
+/* 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .todo-container {
+  padding-top: 102px;
+} */
+
