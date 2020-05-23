@@ -17,8 +17,10 @@
         <title>Todo List</title>
     </head>
     <body>
+        <div class="welcome-page"></div>
+        <div class="app-page">
         <header>
-            <h1>Janet's Todo List</h1>
+            <h1>Sammy's Todo List</h1>
         </header>
         <form >
             <div class="inputDiv">
@@ -33,19 +35,17 @@
                 <i class="fas fa-plus-square"></i>
             </button>
             <div class="select">
-                <select name="todos" id="" class="filter-todo">
-                    <option value="All">All</option>
-                    <option value="Completed">Completed</option>
-                    <option value="Uncompleted">Uncompleted</option>
+                <select name="todos" class="filter-todo">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
                 </select>
             </div> 
         </form>
         <div class="todo-container">
-            <ul class="todo-list">
-                <!-- injected with eventlisteners -->
-            </ul>
+            <ul class="todo-list"></ul>
         </div>
-
+        </div>
         <script src="./index.js"></script>
     </body>
 </html>
