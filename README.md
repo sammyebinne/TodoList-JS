@@ -12,4 +12,10 @@ Future features
  - Details field changed to datepicker/timepicker to set due date to finish tasks
  - Form and Header are made sticky on scroll so scrolling through tasks doesn't move the whole page
  - Tasks will be displayed in task groups on welcome page once you have set your name and also added tasks
+ - Add cross-browser support 
+ - Make styling more mobile-friendly
+
+ ### Link to Test the Application Live 
+
+[Click here](https://sammyebinne.github.io/TodoList-JS/) to see a live demo of the app in your browser.
  
