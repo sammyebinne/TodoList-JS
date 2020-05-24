@@ -15,7 +15,7 @@ const filterOption = document.querySelector('.filter-todo');
 // Event Listeners
 addBtn.addEventListener('click', formValidate);
 todoList.addEventListener('click', deleteOrCheck);
-filterOption.addEventListener('click', filterTodo);
+filterOption.addEventListener('change', filterTodo);
 document.addEventListener('DOMContentLoaded', refreshTodo);
 //window.onscroll = stickyScroll();
 
