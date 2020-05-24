@@ -9,6 +9,7 @@ html{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    z-index: 1;
 }
 
 body {
@@ -19,6 +20,10 @@ body {
 
 header {
     font-size: 1.7rem;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; */
 }
 
 header,
@@ -27,12 +32,24 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 999;
     /* padding: 10px; */
 }
 
 form {
     flex-direction: column;
     position: relative;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 15vh;
+    z-index: 999;
+    /* position: fixed;
+    top: 20vh;
+    left: 0;
+    right: 0; */
 }
 
 .inputDiv {
@@ -94,6 +111,9 @@ form {
     transition: all 0.3s ease-in;
     max-width: 60vh;
     width: 60vh;
+    z-index: 10;
+    /* position: relative;
+    top: 40vh; */
 }
 
 .todoDiv:hover{

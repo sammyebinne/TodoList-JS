@@ -1,5 +1,5 @@
 # TodoList-JS
-A simple Todo list with simple animations, using plain Javascript. 
+A simple Todo list app with simple animations, using plain Javascript. 
 
 Features
  - An app that allows you set tasks and add details (example "due date")
