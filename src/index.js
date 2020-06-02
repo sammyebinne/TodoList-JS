@@ -4,11 +4,9 @@ const title = document.querySelector('.todo-input');
 const taskDetail = document.querySelector('.todo-input-details');
 const todoList = document.querySelector('.todo-list');
 const filterOption = document.querySelector('.filter-todo');
+const faderArea = document.querySelector('.todo-container');
+const tasks = document.querySelectorAll('div.todoDiv');
 
-// Define variables for scroll
-// const header = document.querySelector('header');
-// const form = document.querySelector('form');
-// const sticky = header.offsetTop;
 
 
 
@@ -17,7 +15,7 @@ addBtn.addEventListener('click', formValidate);
 todoList.addEventListener('click', deleteOrCheck);
 filterOption.addEventListener('change', filterTodo);
 document.addEventListener('DOMContentLoaded', refreshTodo);
-//window.onscroll = stickyScroll();
+// window.addEventListener('scroll', scrollFade);
 
 
 
@@ -33,6 +31,8 @@ function addTask(event) {
     // todoDiv
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todoDiv');
+    // add class for fadeaway onScroll feature
+    todoDiv.classList.add('scroll-fade');
     // todoTitle
     const newTitle = document.createElement('li');
     newTitle.classList.add('todo-title');
@@ -78,7 +78,7 @@ function deleteOrCheck(event) {
 
         let todos = JSON.parse(localStorage.getItem('todos'));
 
-        todos.forEach(function (t, i){
+        todos.forEach(function (t, i) {
             todos[i].todo == title ? todos.splice(i, 1) : null
         });
 
@@ -89,17 +89,17 @@ function deleteOrCheck(event) {
 
     if (item.classList[0] === 'check-btn') {
         let todoDiv = item.parentElement;
-        
+
         let title = todoDiv.firstChild.innerText;
-        
+
         let todos = JSON.parse(localStorage.getItem('todos'));
-        
+
         todos.forEach(function (t, i) {
             todos[i].todo == title ? (todos[i].done == false ? todos[i].done = true : todos[i].done = false) : null;
         });
 
         localStorage.setItem('todos', JSON.stringify(todos));
-        
+
         todoDiv.classList.toggle('checked');
 
     }
@@ -207,12 +207,22 @@ function refreshTodo() {
 
 }
 
-// function stickyScroll (){
-//     if (window.pageYOffset > sticky) {
-//         header.classList.add("sticky");
-//         form.classList.add("sticky");
-//     } else {
-//         header.classList.remove("sticky");
-//         header.classList.remove("sticky");
-//     }
-// }
+
+const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3
+};
+
+const observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(function (entry) {
+        console.log(entry);
+        // console.log((tasks));
+    })
+}, options);
+
+function track(event) {
+    tasks.forEach(function (task) {
+        observer.observe(task);
+    });
+}

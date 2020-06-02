@@ -21,10 +21,6 @@ body {
 
 header {
     font-size: 1.7rem;
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    right: 0; */
 }
 
 header,
@@ -33,24 +29,22 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 999;
-    /* padding: 10px; */
 }
 
 form {
     flex-direction: column;
-    position: relative;
-    position: sticky;
-    position: -webkit-sticky;
     top: 15vh;
-    z-index: 999;
-    /* position: fixed;
-    top: 20vh;
-    left: 0;
-    right: 0; */
+   
+}
+
+@media only screen and (max-width: 480px) {
+    header{
+        font-size: 1.2rem;
+    }
+    .todo-container{
+        margin: 0px 15px 15px 0px;
+        width: 100vw;
+    }
 }
 
 .inputDiv {
@@ -81,7 +75,7 @@ form {
     cursor: pointer;
     transition: all 0.3s ease;
     position: absolute;
-    top: 15%;
+    top: 24%;
     margin-left: 130px; 
 }
 
@@ -94,7 +88,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 10px; */
+    padding-bottom: 10px;
 }
 
 .todo-list{
@@ -110,11 +104,7 @@ form {
     justify-content: space-between;
     align-items: center;
     transition: all 0.3s ease-in;
-    max-width: 60vh;
-    width: 60vh;
-    /* z-index: 10; */
-    /* position: relative;
-    top: 40vh; */
+    max-width: 70vh;
 }
 
 .todoDiv:hover{
@@ -122,7 +112,7 @@ form {
 }
 
 .todoDiv li{
-    flex: 1;
+    flex: 1; 
 }
 
 .trash-btn, 
@@ -148,6 +138,8 @@ form {
 .todo-title, 
 .todo-detail{
     padding: 0rem 0.5rem;
+    overflow: scroll;
+    cursor: text;
 }
 
 .todo-title{
@@ -198,14 +190,4 @@ select {
     color: darkgreen;
 }
 
-/* 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
-.sticky + .todo-container {
-  padding-top: 102px;
-} */
 
