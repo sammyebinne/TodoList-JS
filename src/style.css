@@ -38,12 +38,30 @@ form {
 }
 
 @media only screen and (max-width: 480px) {
+  
     header{
         font-size: 1.2rem;
     }
+    form{
+        display: flex;
+    }
     .todo-container{
-        margin: 0px 15px 15px 0px;
+        margin-right: 15px;
         width: 100vw;
+    }
+    /* .inputDiv{
+        max-width: 40vw;
+        right: 50%;
+    } */
+    .todo-input, 
+    .todo-input-details{
+        font-size: 1rem;
+        right: 20%;
+        
+    }
+    .add-btn{
+       display: flex;
+       right: 10%;
     }
 }
 
@@ -52,20 +70,21 @@ form {
     grid-column: auto;
 }
 
-.todo-input, .todo-input-details {
+.todo-input, 
+.todo-input-details {
     font-size: 1.3rem;
-    margin-right: 30px;
+    margin-right: 25%;
     padding: 5px;
     border-radius: 0.5rem;
     background: rgb(207, 207, 200);
 }
 
-.todo-input-details{
+.todo-input-details {
     margin-top: 10px;
     min-height: fit-content;
 }
 
-.add-btn{
+.add-btn {
     font-size: 2rem;
     color: darkgreen;
     padding:0px 5px;
@@ -76,7 +95,7 @@ form {
     transition: all 0.3s ease;
     position: absolute;
     top: 24%;
-    margin-left: 130px; 
+    margin-left: 10%; 
 }
 
 .add-btn:hover {
@@ -89,6 +108,7 @@ form {
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .todo-list{
