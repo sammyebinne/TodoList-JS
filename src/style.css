@@ -49,15 +49,11 @@ form {
         margin-right: 15px;
         width: 100vw;
     }
-    /* .inputDiv{
-        max-width: 40vw;
-        right: 50%;
-    } */
     .todo-input, 
     .todo-input-details{
         font-size: 1rem;
         right: 20%;
-        
+        width: 70%;
     }
     .add-btn{
        display: flex;
@@ -77,6 +73,7 @@ form {
     padding: 5px;
     border-radius: 0.5rem;
     background: rgb(207, 207, 200);
+    width: 15vw;
 }
 
 .todo-input-details {
@@ -198,7 +195,7 @@ select {
 
 select {
     color: inherit;
-    width: 10rem;
+    width: 12rem;
     cursor: pointer;
     padding: .5rem;
     font-size: 1rem;
