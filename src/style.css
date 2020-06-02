@@ -135,6 +135,29 @@ form {
     flex: 1; 
 }
 
+.todo-title::-webkit-scrollbar,
+.todo-detail::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.todo-title,
+.todo-detail {
+  -ms-overflow-style: none;
+}
+
+.todo-title, 
+.todo-detail{
+    padding: 0rem 0.5rem;
+    overflow: scroll;
+    cursor: text;
+}
+
+.todo-title{
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
 .trash-btn, 
 .check-btn {
     background-color: rgb(102, 109, 102);
@@ -153,18 +176,6 @@ form {
 
 .check-btn {
     background-color: rgb(102, 153, 26);
-}
-
-.todo-title, 
-.todo-detail{
-    padding: 0rem 0.5rem;
-    overflow: scroll;
-    cursor: text;
-}
-
-.todo-title{
-    font-weight: bolder;
-    font-size: 1.3rem;
 }
 
 .fas {
